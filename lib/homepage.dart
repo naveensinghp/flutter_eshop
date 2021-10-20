@@ -12,6 +12,24 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
  @override
   void initState() {
+    Future.delayed(const Duration(seconds: 0)).
+    then((_) {
+       showModalBottomSheet(
+          context: context,
+          builder: (builder) {
+            return Container(
+                   child: Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        mainAxisSize: MainAxisSize.min,
+                         children: const <Widget>[
+                           Text('Meet new Era of'),
+                         ]
+                      )
+                   ),
+                );
+          });
+    });
     super.initState();
  }
   @override
