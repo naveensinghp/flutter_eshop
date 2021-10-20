@@ -1,7 +1,7 @@
 # flutter_eshop
-<<<<<<< HEAD
 
-A new Flutter project.
+
+A New Flutter project.
 
 ## Getting Started
 
@@ -17,4 +17,3 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 =======
 A Simple Nature Beauty Comestics
->>>>>>> d895b15a02256a5aedcc5f9f98e5399a336c1055
