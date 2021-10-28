@@ -1,13 +1,22 @@
 import 'package:flutter/material.dart';
 
 class Data {
-  final String homePageTitle,productPageTitle;
-  Data({required this.homePageTitle, required this.productPageTitle});
+  final String homePageFirstTitle;
+  final String homePageSecondTitle;
+  final String homepageImagepath;
+
+  Data({
+    required this.homePageFirstTitle, 
+    required this.homePageSecondTitle,
+    required this.homepageImagepath
+    });
 
 }
 
-final Data testData = Data(
-  homePageTitle: "Natural",
-  productPageTitle: "Hellp"
+final Data appData = Data(
+  homePageFirstTitle: 'Make new era of',
+  homePageSecondTitle: 'Natural Beauty',
+  homepageImagepath : 'assets/image/one.jpg',
+
 );
 

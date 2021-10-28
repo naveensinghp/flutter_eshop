@@ -1,79 +1,41 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_eshop/homepagebottomsheet.dart';
+import 'package:flutter_eshop/homepagecard.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
   @override
   State<MyHomePage> createState() => _MyHomePageState();
-
-  
 }
 
 class _MyHomePageState extends State<MyHomePage> {
- @override
+  @override
   void initState() {
-    Future.delayed(const Duration(seconds: 0)).
-    then((_) {
-       showModalBottomSheet(
+    Future.delayed(const Duration(seconds: 0)).then((_) {
+      showModalBottomSheet(
           context: context,
           builder: (builder) {
-            return Container(
-                   child: Center(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        mainAxisSize: MainAxisSize.min,
-                         children: const <Widget>[
-                           Text('Meet new Era of'),
-                         ]
-                      )
-                   ),
-                );
+            return const HomePageBottomSheet();
           });
     });
     super.initState();
- }
+  }
+
   @override
   Widget build(BuildContext context) {
     const color = Color(0xFF98d6ed);
     return Scaffold(
       backgroundColor: color,
       body: Container(
-        padding: const EdgeInsets.all(100),
-        child: ElevatedButton(
-          child: const Text('showModalBottomSheet'),
-          onPressed: () {
-            showModalBottomSheet<void>(
-              context: context,
-              builder: (BuildContext context) {
-                return Container(
-                   height: 200,
-                   color: Colors.amber,
-                   child: Center(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        mainAxisSize: MainAxisSize.min,
-                         children: <Widget>[
-                           const Text('Modal BottomSheet'),
-                           ElevatedButton(
-                            child: const Text('Close BottomSheet'),
-                            onPressed: () => Navigator.pop(context),
-                          )
-                         ]
-                      )
-                   ),
-                );
-              }
-            );
-          }
-          ),
-        alignment: Alignment.topCenter,
+        alignment: Alignment.bottomCenter,
         decoration: const BoxDecoration(
           image: DecorationImage(
-          image: ExactAssetImage('assets/image/one.jpg'),
-          fit: BoxFit.cover,
-          alignment: Alignment.center,
+            image: ExactAssetImage('assets/image/one.jpg'),
+            fit: BoxFit.cover,
+            alignment: Alignment.bottomCenter,
           ),
         ),
+        child: const HomePageBottomCard(),
       ),
     );
   }
