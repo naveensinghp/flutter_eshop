@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_eshop/homepagebottomsheet.dart';
 import 'package:flutter_eshop/homepagecard.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -9,18 +8,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  @override
-  void initState() {
-    Future.delayed(const Duration(seconds: 0)).then((_) {
-      showModalBottomSheet(
-          context: context,
-          builder: (builder) {
-            return const HomePageBottomSheet();
-          });
-    });
-    super.initState();
-  }
-
+  
 
   @override
   Widget build(BuildContext context) {

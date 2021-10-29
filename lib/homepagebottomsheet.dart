@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_eshop/model/data.dart';
 
 class HomePageBottomSheet extends StatelessWidget {
   const HomePageBottomSheet({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final Data appData; 
     return Container(
       height: 400,
       // decoration: BoxDecoration(

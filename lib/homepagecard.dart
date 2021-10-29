@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_eshop/model/data.dart';
 
 class HomePageBottomCard extends StatelessWidget {
   //final Data appData; 
@@ -9,10 +8,20 @@ class HomePageBottomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        color: Colors.white,
+        //color: Colors.white,
         height: 410,
         width: MediaQuery.of(context).size.width,
-        
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(30)
+        ),
+        padding: const EdgeInsets.only(left:50, top:50),
+        child: const Text('Meet new era of',
+        style: TextStyle(
+          fontSize: 20,
+          color: Colors.pink
+          ),
+        )
       );
   }
 }
