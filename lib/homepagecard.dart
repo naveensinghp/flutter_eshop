@@ -4,30 +4,57 @@ class HomePageBottomCard extends StatelessWidget {
   //final Data appData;
   final leftSection = Column(
     children: const <Widget>[
-      Text('Meet new era of',
-        style: TextStyle(
-          fontSize: 20,
-          color: Colors.pink
+       SizedBox(height: 30,),
+      Padding(
+        padding: EdgeInsets.all(25),
+        child: Text('Meet new era of',
+            style: TextStyle(
+            fontSize: 19,
+            color: Colors.pink
+          ),
+          
         ),
       ),
-      Text('Meet new era of',
+      Text('Natural',
         style: TextStyle(
-          fontSize: 20,
-          color: Colors.pink
+          fontSize: 50,
+          fontWeight: FontWeight.w800,
+          color: Colors.black87
         ),
       ),
-      Text('Meet new era of',
+      Text('Natural',
         style: TextStyle(
-          fontSize: 20,
-          color: Colors.pink
+          fontSize: 50,
+          fontWeight: FontWeight.w800,
+          color: Colors.black87
+        ),
+      ),
+      Text('Cosmetics',
+        style: TextStyle(
+          fontSize: 50,
+          fontWeight: FontWeight.w800,
+          color: Colors.black87
         ),
       ),
     ],
   );
 
   final rightSection = Column(
-    children: const <Widget>[
-      Text('Button goes here')
+    children: <Widget>[
+      //Text('Button goes here')
+      ElevatedButton(
+        onPressed: () {},
+        child: const Icon(
+          Icons.arrow_forward,
+          color: Colors.black87,
+          size: 30.0,
+        ),
+        style: ElevatedButton.styleFrom(
+          primary: Colors.purple,
+          shape: const CircleBorder(),
+          padding: const EdgeInsets.all(24),
+        ),
+      )
     ],
     
   );
