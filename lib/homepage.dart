@@ -24,7 +24,7 @@ class _MyHomePageState extends State<MyHomePage> {
             alignment: Alignment.bottomCenter,
           ),
         ),
-        child: const HomePageBottomCard(),
+        child: HomePageBottomCard(),
       ),
     );
   }
