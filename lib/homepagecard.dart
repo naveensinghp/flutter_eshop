@@ -5,40 +5,76 @@ class HomePageBottomCard extends StatelessWidget {
   //final Data appData;
   final leftSection = Column(
     children: const <Widget>[
-       SizedBox(height: 30,),
-      Text('Meet new era of',
-        style: TextStyle(
-          fontSize: 20,
-          color: Colors.pink
+       SizedBox(height: 50,),
+       Padding(
+         padding: EdgeInsets.only(right:50),
+         child: Text('Meet new era of',
+          style: TextStyle(
+            fontSize: 20,
+            color: Colors.pink
+          ),      
+      ), 
+    ),
+    SizedBox(height: 10),
+      Padding(
+        padding: EdgeInsets.only(right: 15),
+        child: Text('Natural',
+          style: TextStyle(
+            fontSize: 50,
+            fontWeight: FontWeight.w800,
+            color: Colors.black87
+          ),
         ),
       ),
-      Text('Natural',
-        style: TextStyle(
-          fontSize: 50,
-          fontWeight: FontWeight.w800,
-          color: Colors.black87
+
+      Padding(
+        padding: EdgeInsets.only(right: 15),
+        child: Text('Beauty',
+          style: TextStyle(
+            fontSize: 50,
+            fontWeight: FontWeight.w800,
+            color: Colors.black87
+          ),
         ),
       ),
-      Text('Beauty',
-        style: TextStyle(
-          fontSize: 50,
-          fontWeight: FontWeight.w800,
-          color: Colors.black87
-        ),
+      SizedBox(height: 4),
+      Align(
+        alignment: Alignment.topRight,
+        child: Text('Cosmetics',
+          style: TextStyle(
+            fontSize: 50,
+            fontWeight: FontWeight.w800,
+            color: Colors.black87
+          ),
       ),
-      Text('Cosmetics',
-        style: TextStyle(
-          fontSize: 50,
-          fontWeight: FontWeight.w800,
-          color: Colors.black87
-        ),
-      ),
+      )
+      
+      
+      // Text('Beauty',
+      //   style: TextStyle(
+      //     fontSize: 50,
+      //     fontWeight: FontWeight.w800,
+      //     color: Colors.black87
+      //   ),
+      // ),
+      // Text('Cosmetics',
+      //   style: TextStyle(
+      //     fontSize: 50,
+      //     fontWeight: FontWeight.w800,
+      //     color: Colors.black87
+      //   ),
+      // ),
     ],
   );
 
   final rightSection = Column(
     children: <Widget>[
       //Text('Button goes here')
+      const SizedBox(height: 110),
+      // Padding(
+      //   padding: const EdgeInsets.fromLTRB(left:23),
+      //   child: const Text('Hello'),
+      //   ),
       ElevatedButton(
         onPressed: () {},
         child: const Icon(
