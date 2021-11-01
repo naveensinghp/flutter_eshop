@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class HomePageBottomCard extends StatelessWidget {
   //final Data appData;
   final leftSection = Column(
