@@ -5,14 +5,10 @@ class HomePageBottomCard extends StatelessWidget {
   final leftSection = Column(
     children: const <Widget>[
        SizedBox(height: 30,),
-      Padding(
-        padding: EdgeInsets.all(25),
-        child: Text('Meet new era of',
-            style: TextStyle(
-            fontSize: 19,
-            color: Colors.pink
-          ),
-          
+      Text('Meet new era of',
+        style: TextStyle(
+          fontSize: 20,
+          color: Colors.pink
         ),
       ),
       Text('Natural',
@@ -22,7 +18,7 @@ class HomePageBottomCard extends StatelessWidget {
           color: Colors.black87
         ),
       ),
-      Text('Natural',
+      Text('Beauty',
         style: TextStyle(
           fontSize: 50,
           fontWeight: FontWeight.w800,
@@ -50,7 +46,7 @@ class HomePageBottomCard extends StatelessWidget {
           size: 30.0,
         ),
         style: ElevatedButton.styleFrom(
-          primary: Colors.purple,
+          primary: const Color(0xff00e2e3),
           shape: const CircleBorder(),
           padding: const EdgeInsets.all(24),
         ),
