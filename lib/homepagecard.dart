@@ -4,9 +4,9 @@ class HomePageBottomCard extends StatelessWidget {
   //final Data appData;
   final leftSection = Column(
     children: const <Widget>[
-       SizedBox(height: 50,),
+       SizedBox(height: 60,),
        Padding(
-         padding: EdgeInsets.only(right:50),
+         padding: EdgeInsets.only(left:1),
          child: Text('Meet new era of',
           style: TextStyle(
             fontSize: 20,
@@ -17,7 +17,7 @@ class HomePageBottomCard extends StatelessWidget {
 
     SizedBox(height: 10),
       Padding(
-        padding: EdgeInsets.only(right: 15),
+        padding: EdgeInsets.only(left: 25),
         child: Text('Natural',
           style: TextStyle(
             fontSize: 50,
@@ -29,7 +29,7 @@ class HomePageBottomCard extends StatelessWidget {
 
 
       Padding(
-        padding: EdgeInsets.only(right: 15),
+        padding: EdgeInsets.only(left: 15),
         child: Text('Beauty',
           style: TextStyle(
             fontSize: 50,
@@ -38,46 +38,39 @@ class HomePageBottomCard extends StatelessWidget {
           ),
         ),
       ),
-      
+
+      // Text(
+      //   'Cosmetics',
+      //   style: TextStyle(
+      //     fontSize: 50,
+      //     fontWeight: FontWeight.w700
+      //   ),
+        
+      // )
+
       Padding(
-        padding: EdgeInsets.only(right: 20),
+        padding: EdgeInsets.only(left: 15),
         child: 
-          // Text('Cosmetics',
-          //   style: TextStyle(
-          //     fontSize: 50,
-          //     fontWeight: FontWeight.w800,
-          //     color: Colors.black87,
-          //     backgroundColor: Colors.red
-          //   ),
-              FittedBox(
-                fit: BoxFit.contain,
-                child: Text('Cosmetics',
-                  style: TextStyle(
-                    fontSize: 46,
-                    fontWeight: FontWeight.w800,
-                    color: Colors.black87,
-                    backgroundColor: Colors.red
-                  ),
-              ),
+      Text('Cosmetics',
+          style: TextStyle(
+            fontSize: 50,
+            fontWeight: FontWeight.w800,
+            color: Colors.black87
+          ),
         ),
       ),
-      
-      
-      
-      // Text('Beauty',
-      //   style: TextStyle(
-      //     fontSize: 50,
-      //     fontWeight: FontWeight.w800,
-      //     color: Colors.black87
-      //   ),
-      // ),
-      // Text('Cosmetics',
-      //   style: TextStyle(
-      //     fontSize: 50,
-      //     fontWeight: FontWeight.w800,
-      //     color: Colors.black87
-      //   ),
-      // ),
+    
+    ],
+  );
+  final centerSection = Column(
+    children: const<Widget>[
+      Text('Cosmetics',
+          style: TextStyle(
+            fontSize: 50,
+            fontWeight: FontWeight.w800,
+            color: Colors.black87
+          ),
+        ),
     ],
   );
 
@@ -122,6 +115,7 @@ class HomePageBottomCard extends StatelessWidget {
         child: Row(
           children: <Widget>[
             leftSection,
+            //centerSection,
             rightSection
           ],
         ),
