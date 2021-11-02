@@ -37,17 +37,30 @@ class HomePageBottomCard extends StatelessWidget {
           ),
         ),
       ),
-      SizedBox(height: 4),
-      Align(
-        alignment: Alignment.topRight,
-        child: Text('Cosmetics',
-          style: TextStyle(
-            fontSize: 50,
-            fontWeight: FontWeight.w800,
-            color: Colors.black87
-          ),
+      
+      Padding(
+        padding: EdgeInsets.only(right: 20),
+        child: 
+          // Text('Cosmetics',
+          //   style: TextStyle(
+          //     fontSize: 50,
+          //     fontWeight: FontWeight.w800,
+          //     color: Colors.black87,
+          //     backgroundColor: Colors.red
+          //   ),
+              FittedBox(
+                fit: BoxFit.contain,
+                child: Text('Cosmetics',
+                  style: TextStyle(
+                    fontSize: 46,
+                    fontWeight: FontWeight.w800,
+                    color: Colors.black87,
+                    backgroundColor: Colors.red
+                  ),
+              ),
+        ),
       ),
-      )
+      
       
       
       // Text('Beauty',
