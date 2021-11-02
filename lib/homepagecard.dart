@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class HomePageBottomCard extends StatelessWidget {
   //final Data appData;
   final leftSection = Column(
@@ -15,6 +14,7 @@ class HomePageBottomCard extends StatelessWidget {
           ),      
       ), 
     ),
+
     SizedBox(height: 10),
       Padding(
         padding: EdgeInsets.only(right: 15),
@@ -26,6 +26,7 @@ class HomePageBottomCard extends StatelessWidget {
           ),
         ),
       ),
+
 
       Padding(
         padding: EdgeInsets.only(right: 15),
