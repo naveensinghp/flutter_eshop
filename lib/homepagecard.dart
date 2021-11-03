@@ -39,38 +39,39 @@ class HomePageBottomCard extends StatelessWidget {
         ),
       ),
 
-      // Text(
-      //   'Cosmetics',
-      //   style: TextStyle(
-      //     fontSize: 50,
-      //     fontWeight: FontWeight.w700
+      // Padding(
+      //   padding: EdgeInsets.only(left: 15),
+      //   child: 
+      // Text('Cosmetics',
+      //     style: TextStyle(
+      //       fontSize: 50,
+      //       fontWeight: FontWeight.w800,
+      //       color: Colors.black87
+      //     ),
       //   ),
-        
-      // )
-
-      Padding(
-        padding: EdgeInsets.only(left: 15),
-        child: 
-      Text('Cosmetics',
-          style: TextStyle(
-            fontSize: 50,
-            fontWeight: FontWeight.w800,
-            color: Colors.black87
-          ),
-        ),
-      ),
+      // ),
     
     ],
   );
-  final centerSection = Column(
+  final centerSection = Row(
     children: const<Widget>[
-      Text('Cosmetics',
-          style: TextStyle(
-            fontSize: 50,
-            fontWeight: FontWeight.w800,
-            color: Colors.black87
-          ),
-        ),
+      Text('so'),
+      // Expanded(
+      //   child: Text('Cosmetics',
+      //    style: TextStyle(
+      //       fontSize: 50,
+      //       fontWeight: FontWeight.w800,
+      //       color: Colors.black87
+      //     ),
+      // ),
+    
+      // Text('Cosmetics',
+      //     style: TextStyle(
+      //       fontSize: 50,
+      //       fontWeight: FontWeight.w800,
+      //       color: Colors.black87
+      //     ),
+      //   ),
     ],
   );
 
@@ -115,7 +116,7 @@ class HomePageBottomCard extends StatelessWidget {
         child: Row(
           children: <Widget>[
             leftSection,
-            //centerSection,
+            centerSection,
             rightSection
           ],
         ),
