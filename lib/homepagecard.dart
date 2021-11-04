@@ -1,58 +1,61 @@
 import 'package:flutter/material.dart';
+import 'colors.dart' as color;
 
 class HomePageBottomCard extends StatelessWidget {
   //final Data appData;
-  final leftSection = Column(
-    children: const <Widget>[
-       SizedBox(height: 60,),
-       Padding(
-         padding: EdgeInsets.only(left:1),
-         child: Text('Meet new era of',
-          style: TextStyle(
-            fontSize: 20,
-            color: Colors.pink
-          ),      
-      ), 
+  final leftSection = const Padding(
+    padding: EdgeInsets.only(top: 50,left: 50),
+    child: Align( 
+      alignment: Alignment.topLeft,
+      child: Text('Make new era of',
+        style: TextStyle(
+        fontSize: 20,
+        //color: color.AppColor.homePageTitleFirst
+        color: Colors.pink
+
+        ),
+      ),
     ),
-
-    SizedBox(height: 10),
-      Padding(
-        padding: EdgeInsets.only(left: 25),
-        child: Text('Natural',
-          style: TextStyle(
-            fontSize: 50,
-            fontWeight: FontWeight.w800,
-            color: Colors.black87
-          ),
-        ),
-      ),
-
-
-      Padding(
-        padding: EdgeInsets.only(left: 15),
-        child: Text('Beauty',
-          style: TextStyle(
-            fontSize: 50,
-            fontWeight: FontWeight.w800,
-            color: Colors.black87
-          ),
-        ),
-      ),
-
-      // Padding(
-      //   padding: EdgeInsets.only(left: 15),
-      //   child: 
-      // Text('Cosmetics',
-      //     style: TextStyle(
-      //       fontSize: 50,
-      //       fontWeight: FontWeight.w800,
-      //       color: Colors.black87
-      //     ),
-      //   ),
-      // ),
     
-    ],
   );
+  // const SizedBox(
+  //   height: 1,
+  //   child: Padding(
+  //     padding: EdgeInsets.all(1),
+  //     child: Align(
+  //       alignment: Alignment.topLeft,
+  //       child: Text('Make new era',
+  //       style: TextStyle(
+  //       fontSize: 20,
+  //       color: Colors.pink
+  //       ),
+  //     ),
+  //   ),
+  //  ),
+  // );
+  
+  // Padding(
+  //   padding: EdgeInsets.all(10),
+  //   child: Align( 
+  //     alignment: Alignment.topLeft,
+  //     child: Text('Make new era',
+  //     style: TextStyle(
+  //     fontSize: 20,
+  //     color: Colors.pink
+  //     ),
+  //     ),
+  //   )
+  // );
+  
+  // const Align(
+  //   alignment: Alignment.topLeft,
+  //   child: Text('Make new era',
+  //     style: TextStyle(
+  //     fontSize: 20,
+  //     color: Colors.pink
+  //   ),
+  // ),
+  // );
   final centerSection = Row(
     children: const<Widget>[
       Text('so'),
@@ -77,7 +80,7 @@ class HomePageBottomCard extends StatelessWidget {
 
   final rightSection = Column(
     children: <Widget>[
-      //Text('Button goes here')
+      //Text('Button goes here')  
       const SizedBox(height: 110),
       // Padding(
       //   padding: const EdgeInsets.fromLTRB(left:23),
@@ -112,12 +115,11 @@ class HomePageBottomCard extends StatelessWidget {
           color: Colors.white,
           borderRadius: BorderRadius.circular(30)
         ),
-        //padding: const EdgeInsets.only(left: 10,right: 200,top: 40),
-        child: Row(
+        child: Column(
           children: <Widget>[
             leftSection,
-            centerSection,
-            rightSection
+            //centerSection,
+            //rightSection
           ],
         ),
         // child: Column(

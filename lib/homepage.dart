@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_eshop/homepagecard.dart';
+//import 'package:flutter_eshop/homepagecard.dart';
+import 'colors.dart' as color;
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -24,7 +25,111 @@ class _MyHomePageState extends State<MyHomePage> {
             alignment: Alignment.bottomCenter,
           ),
         ),
-        child: HomePageBottomCard(),
+        //child: HomePageBottomCard(),
+        child: Container(
+          padding: const EdgeInsets.only(left: 30,top: 40),
+          height: 410,
+          width: MediaQuery.of(context).size.width,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(30)
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              const Text(
+                 'make an era of',
+                  style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.pink
+                ),
+              ),
+              const SizedBox(height: 4,),
+              Container(
+                padding: const EdgeInsets.only(right: 50,top: 10),
+                child: Row(
+                  children:  <Widget>[
+                    const Text(
+                   'Natural',
+                    style: TextStyle(
+                    fontSize: 60,
+                    color: Colors.black87,
+                    fontWeight: FontWeight.bold
+                  ),
+                  
+                ),
+                Expanded(child: Container()),
+                const SizedBox(height: 10,),
+                ElevatedButton(
+                     onPressed: () {},
+                     child: const Icon(
+                      Icons.arrow_forward,
+                      color: Colors.black87,
+                      size: 30.0,
+                    ),
+                      style: ElevatedButton.styleFrom(
+                      primary: const Color(0xff00e2e3),
+                      shape: const CircleBorder(),
+                      padding: const EdgeInsets.all(24),
+                    ),
+                  )
+                // Container(
+                //   //padding: const EdgeInsets.only(top: 20),
+                //   child: ElevatedButton(
+                //      onPressed: () {},
+                //       child: const Icon(
+                //         Icons.arrow_forward,
+                //         color: Colors.black87,
+                //         size: 30.0,
+                //       ),
+                //       style: ElevatedButton.styleFrom(
+                //         primary: const Color(0xff00e2e3),
+                //         shape: const CircleBorder(),
+                //         padding: const EdgeInsets.all(24),
+                //       ),
+                //   ),
+                // )
+                // Expanded(child: Container(
+                //   padding: const EdgeInsets.only(top: 40),
+                //   child: ElevatedButton(
+                //        onPressed: () {},
+                //        child: const Icon(
+                //         Icons.arrow_forward,
+                //         color: Colors.black87,
+                //         size: 30.0,
+                //       ),
+                //         style: ElevatedButton.styleFrom(
+                //         primary: const Color(0xff00e2e3),
+                //         shape: const CircleBorder(),
+                //         padding: const EdgeInsets.all(24),
+                //       ),
+                //     )
+                //   // const Text('hell'),
+                // )
+                // ),
+                
+                ],
+            ),
+              ),
+              const Text(
+                 'Beauty',
+                  style: TextStyle(
+                  fontSize: 60,
+                  color: Colors.black87,
+                  fontWeight: FontWeight.bold
+                ),
+              ),
+               const Text(
+                 'Cosmetics',
+                  style: TextStyle(
+                  fontSize: 60,
+                  color: Colors.black87,
+                  fontWeight: FontWeight.bold
+                ),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
