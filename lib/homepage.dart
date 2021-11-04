@@ -54,7 +54,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     Expanded(child: Container()),
                     Container(
-                      padding: const EdgeInsets.only(right: 30, top: 10),
+                      padding: const EdgeInsets.only(right: 25,),
+                      margin: const EdgeInsets.only(top: 10),
                       child: ElevatedButton(
                         onPressed: () {},
                         child: const Icon(
