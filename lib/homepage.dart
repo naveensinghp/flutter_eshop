@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_eshop/colors.dart' as color;
+import 'package:flutter_eshop/secondpage.dart';
 //import 'package:flutter_eshop/homepagecard.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -55,9 +56,11 @@ class _MyHomePageState extends State<MyHomePage> {
                     Expanded(child: Container()),
                     Container(
                       padding: const EdgeInsets.only(right: 25,),
-                      margin: const EdgeInsets.only(top: 10),
+                      //margin: const EdgeInsets.only(top: 10),
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          _navigateToNextScreen(context);
+                        },
                         child: const Icon(
                           Icons.arrow_forward,
                           color: Colors.black87,
@@ -92,5 +95,9 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
     );
+  }
+
+  void _navigateToNextScreen(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const ProductPage()));
   }
 }
