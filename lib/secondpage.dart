@@ -20,8 +20,6 @@ class ProductPage extends StatelessWidget {
 
 
 
-
-
 /// This is the stateful widget that the main application instantiates.
 class MyStatefulWidget extends StatefulWidget {
   const MyStatefulWidget({Key? key}) : super(key: key);
@@ -37,15 +35,15 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     Text(
-      'Index 0: Home',
+      'Home Page',
       style: optionStyle,
     ),
     Text(
-      'Index 1: Business',
+      'Most Liked Page',
       style: optionStyle,
     ),
     Text(
-      'Index 2: School',
+      'Cart Page',
       style: optionStyle,
     ),
   ];
@@ -65,33 +63,40 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.black87,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home,
-               color: Colors.grey,
-               size: 30,
-              ),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.business,
-               //color: Colors.grey,
-              
-              ),
-            label: 'Business',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'School',
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: const Color(0xff00e2e3),
-        onTap: _onItemTapped,
+      bottomNavigationBar: SizedBox(
+        height: 140,
+        child: BottomNavigationBar(
+          backgroundColor: Colors.black87,
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home,
+                 color: Colors.grey,
+                 size: 30,
+                ),
+              label: '',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.favorite,
+                 //color: Colors.grey,
+                
+                ),
+              label: 'Business',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.shopping_bag,
+                color: Colors.grey,
+                
+                ),
+              label: 'Cart',
+            ),
+          ],
+          currentIndex: _selectedIndex,
+          selectedItemColor: const Color(0xff00e2e3),
+          onTap: _onItemTapped,
+        ),
       ),
     );
   }
