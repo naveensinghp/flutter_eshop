@@ -58,8 +58,13 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
+      body: Container(
+        height: 1000,
+        
+        decoration: BoxDecoration(
+              color: Colors.grey, 
+              borderRadius: BorderRadius.circular(30)),
+
       ),
       bottomNavigationBar: SizedBox(
         height: 140,
