@@ -11,7 +11,9 @@ class ProductPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: _title,
+      color: Colors.green,
       home: MyStatefulWidget(),
     );
   }
@@ -32,7 +34,7 @@ class MyStatefulWidget extends StatefulWidget {
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+    TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     Text(
       'Home',
@@ -59,13 +61,30 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        height: 1000,
-        
-        decoration: BoxDecoration(
-              color: Colors.grey, 
-              borderRadius: BorderRadius.circular(30)),
-
+        padding: const EdgeInsets.only(left: 30, top: 100),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: <Widget>[
+            const Text('Hello, Arya!',style: TextStyle(
+              fontSize: 25,
+              color: Colors.pink
+              ),
+            ),
+            Expanded(child: Container()),
+            // Container(
+            //   decoration: const BoxDecoration(
+            //    image: DecorationImage(
+            //       image: ExactAssetImage('assets/image/pm.jpg'),
+            //       fit: BoxFit.fill,
+            //       alignment: Alignment.bottomLeft,
+            //     ),
+            //   ),
+            // )
+          ],
+        ),
       ),
+      
+      
       bottomNavigationBar: SizedBox(
         height: 140,
         child: BottomNavigationBar(
