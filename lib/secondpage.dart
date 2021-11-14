@@ -61,25 +61,25 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: const EdgeInsets.only(left: 30, top: 100),
+        padding: const EdgeInsets.only(left: 30,top: 90),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          //mainAxisSize: MainAxisSize.max,
           children: <Widget>[
             const Text('Hello, Arya!',style: TextStyle(
-              fontSize: 25,
+              fontSize: 20,
               color: Colors.pink
               ),
             ),
             Expanded(child: Container()),
-            // Container(
-            //   decoration: const BoxDecoration(
-            //    image: DecorationImage(
-            //       image: ExactAssetImage('assets/image/pm.jpg'),
-            //       fit: BoxFit.fill,
-            //       alignment: Alignment.bottomLeft,
-            //     ),
-            //   ),
-            // )
+            Container(
+              padding: const EdgeInsets.only(right: 20),
+              child: const CircleAvatar(
+              radius: 30,
+              backgroundImage:ExactAssetImage('assets/image/one.jpg'
+              ),
+              ),
+            ),
           ],
         ),
       ),
