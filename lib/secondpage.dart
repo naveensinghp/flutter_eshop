@@ -53,38 +53,53 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     });
   }
 
-  final Widget _topSection = Row(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: <Widget>[
-      const Text(
-        'Hello, Aryas!',
-        style: TextStyle(fontSize: 18, color: Colors.pink),
-      ),
-      Expanded(child: Container()),
-      Container(
-        padding: const EdgeInsets.only(right: 20),
-        child: const CircleAvatar(
-          radius: 30,
-          backgroundImage: ExactAssetImage('assets/image/one.jpg'),
-        ),
-      ),
-    ],
-  );
-
-  final _middleSection = Row(
-    children: const <Widget>[
-      Text('Shall Web!')
-    ],
-  );
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-          padding: const EdgeInsets.only(left: 30, top: 80),
-          child: _topSection,
-          //_middleSection
-        
+      body: Container(
+        padding: const EdgeInsets.only(left: 30, top: 80),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Row(
+              children: <Widget>[
+                const Text(
+                  'Hellos, Aryas!',
+                  style: TextStyle(fontSize: 18, color: Colors.pink),
+                ),
+                // const Text('EMpty goes'),
+                Expanded(child: Container()),
+                Container(
+                  padding: const EdgeInsets.only(right: 30),
+                  child: const CircleAvatar(
+                    radius: 30,
+                    backgroundImage: ExactAssetImage('assets/image/one.jpg'),
+                  ),
+                )
+              ],
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: const <Widget>[
+                Text(
+                  'Choose Your',
+                  style: TextStyle(
+                      fontSize: 40,
+                      color: Colors.black87,
+                      fontWeight: FontWeight.w800),
+                ),
+                Text(
+                  'mood for today!',
+                  style: TextStyle(
+                      fontSize: 40,
+                      color: Colors.black87,
+                      fontWeight: FontWeight.w800),
+                )
+              ],
+            ),
+          ],
+        ),
+        //_middleSection
       ),
       bottomNavigationBar: SizedBox(
         height: 140,
