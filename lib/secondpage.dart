@@ -19,9 +19,6 @@ class ProductPage extends StatelessWidget {
   }
 }
 
-
-
-
 /// This is the stateful widget that the main application instantiates.
 class MyStatefulWidget extends StatefulWidget {
   const MyStatefulWidget({Key? key}) : super(key: key);
@@ -34,7 +31,7 @@ class MyStatefulWidget extends StatefulWidget {
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
-    TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     Text(
       'Home',
@@ -56,36 +53,39 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     });
   }
 
+  final Widget _topSection = Row(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: <Widget>[
+      const Text(
+        'Hello, Aryas!',
+        style: TextStyle(fontSize: 18, color: Colors.pink),
+      ),
+      Expanded(child: Container()),
+      Container(
+        padding: const EdgeInsets.only(right: 20),
+        child: const CircleAvatar(
+          radius: 30,
+          backgroundImage: ExactAssetImage('assets/image/one.jpg'),
+        ),
+      ),
+    ],
+  );
+
+  final _middleSection = Row(
+    children: const <Widget>[
+      Text('Shall Web!')
+    ],
+  );
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        padding: const EdgeInsets.only(left: 30,top: 90),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          //mainAxisSize: MainAxisSize.max,
-          children: <Widget>[
-            const Text('Hello, Arya!',style: TextStyle(
-              fontSize: 20,
-              color: Colors.pink
-              ),
-            ),
-            Expanded(child: Container()),
-            Container(
-              padding: const EdgeInsets.only(right: 20),
-              child: const CircleAvatar(
-              radius: 30,
-              backgroundImage:ExactAssetImage('assets/image/one.jpg'
-              ),
-              ),
-            ),
-          ],
-        ),
-      
+      body: SingleChildScrollView(
+          padding: const EdgeInsets.only(left: 30, top: 80),
+          child: _topSection,
+          //_middleSection
+        
       ),
-      
-      
       bottomNavigationBar: SizedBox(
         height: 140,
         child: BottomNavigationBar(
@@ -94,25 +94,23 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             BottomNavigationBarItem(
               icon: Icon(
                 Icons.home,
-                 color: Colors.grey,
-                 size: 30,
-                ),
+                color: Colors.grey,
+                size: 30,
+              ),
               label: '',
             ),
             BottomNavigationBarItem(
               icon: Icon(
                 Icons.favorite,
-                 //color: Colors.grey,
-                
-                ),
+                //color: Colors.grey,
+              ),
               label: 'Business',
             ),
             BottomNavigationBarItem(
               icon: Icon(
                 Icons.shopping_bag,
                 color: Colors.grey,
-                
-                ),
+              ),
               label: 'Cart',
             ),
           ],
