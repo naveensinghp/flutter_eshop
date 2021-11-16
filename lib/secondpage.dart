@@ -6,13 +6,12 @@ void main() => runApp(const ProductPage());
 class ProductPage extends StatelessWidget {
   const ProductPage({Key? key}) : super(key: key);
 
-  static const String _title = 'Flutter Code Sample';
+
 
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: _title,
       color: Colors.green,
       home: MyStatefulWidget(),
     );
@@ -56,6 +55,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.red,
       body: Container(
         padding: const EdgeInsets.only(left: 30, top: 80),
         child: Column(
@@ -97,6 +97,25 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 )
               ],
             ),
+            const SizedBox(height: 20,),
+            Row(
+              children: <Widget>[
+                Container(
+                  height: 50,
+                  width: 360,
+                  decoration: BoxDecoration(
+                     color: Colors.grey,
+                    borderRadius: BorderRadius.circular(30)
+                  ),
+                  // child: const TextField(
+                  //   decoration: InputDecoration(
+                  //     border: OutlineInputBorder(),
+                  //     hintText: 'Search',
+                  //   ),
+                  // ),
+                )
+              ],
+            )
           ],
         ),
         //_middleSection
