@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_eshop/colors.dart' as color;
 import 'package:flutter_eshop/secondpage.dart';
 //import 'package:flutter_eshop/homepagecard.dart';
 
