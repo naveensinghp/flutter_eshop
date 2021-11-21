@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Powder",
+        "extras": "With Olive Oil",
+        "price": "$10.50",
+        "img": "assets/image/powder.jpeg"
+    },
+    {
+        "name":"Palette",
+        "extras": "With sequins",
+        "price": "$10.50",
+        "img": "assets/image/palette.jpeg"
+    },
+    {
+        "name":"Blush",
+        "extras": "Matte",
+        "price": "$10.50",
+        "img": "assets/image/palette.jpeg"
+    },
+    {
+        "name":"Lipstick",
+        "extras": "Deep Pink",
+        "price": "$10.50",
+        "img": "assets/image/palette.jpeg"
+    }
+]

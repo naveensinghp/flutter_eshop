@@ -129,16 +129,51 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 )
               ],
             ),
-            Row(
-              children: <Widget>[
-               Container(
-                    height: 80,
-                    width: 200,
-                    decoration: const BoxDecoration(
-                      color: Colors.red
-                    ),
-                  ),
-              ],
+            // Row(
+            //   children: <Widget>[
+            //    Container(
+            //         height: 80,
+            //         width: 200,
+            //         decoration: const BoxDecoration(
+            //           color: Colors.red
+            //         ),
+            //       ),
+            //   ],
+            // ),
+            Expanded(child: ListView.builder(
+              itemCount: 4,
+              itemBuilder: (_,i){
+                return Row(
+                  children: <Widget>[
+                   Container(
+                     height: 200,
+                     width: 200,
+                     padding: const EdgeInsets.only(bottom: 10),
+                     decoration: BoxDecoration(
+                       color: Colors.white,
+                       borderRadius: BorderRadius.circular(17),
+                       image: const DecorationImage(
+                          image: AssetImage(
+                            "assets/image/powder.jpeg"
+                          )
+                       ),
+                       boxShadow: [
+                         BoxShadow (
+                           blurRadius: 3,
+                           offset: const Offset(5,5),
+                           color: Colors.red.withOpacity(0.1)
+                          ),
+                          BoxShadow (
+                           blurRadius: 3,
+                           offset: const Offset(-5,-5),
+                           color: Colors.red.withOpacity(0.1)
+                          )
+                       ]
+                     ),
+                   ),
+                  ],
+                );
+              })
             )
           ],
         ),
