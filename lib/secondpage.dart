@@ -128,6 +128,17 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   )
                 )
               ],
+            ),
+            Row(
+              children: <Widget>[
+               Container(
+                    height: 80,
+                    width: 200,
+                    decoration: const BoxDecoration(
+                      color: Colors.red
+                    ),
+                  ),
+              ],
             )
           ],
         ),
@@ -141,8 +152,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             BottomNavigationBarItem(
               icon: Icon(
                 Icons.home,
-                color: Colors.grey,
-                size: 30,
+                //color: Colors.grey,
+                size: 35,
               ),
               label: '',
             ),
@@ -150,15 +161,17 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               icon: Icon(
                 Icons.favorite,
                 //color: Colors.grey,
+                size: 35,
               ),
-              label: 'Business',
+              label: '',
             ),
             BottomNavigationBarItem(
               icon: Icon(
                 Icons.shopping_bag,
-                color: Colors.grey,
+                //color: Colors.grey,
+                size: 35,
               ),
-              label: 'Cart',
+              label: '',
             ),
           ],
           currentIndex: _selectedIndex,
