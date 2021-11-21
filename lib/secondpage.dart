@@ -56,6 +56,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xfff6f6f6),
       body: Container(
         padding: const EdgeInsets.only(left: 30, top: 80),
         child: Column(
@@ -105,7 +106,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   width: 370,
                   padding: const EdgeInsets.only(left: 20),
                   decoration: const BoxDecoration(
-                    color: Colors.orange,
+                    color: Colors.white,
                     borderRadius: BorderRadius.all(Radius.circular(30))
                   ),
                   child: const TextField(
@@ -117,12 +118,12 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                         padding: EdgeInsetsDirectional.only(end: 11.0),
                         child: Icon(
                           Icons.search,
-                          color: Colors.black,
+                          color: Colors.grey,
                           size:20
                         ),
                       ),
                       hintText: "Search",
-                      hintStyle: TextStyle(fontSize: 15,color: Colors.black)
+                      hintStyle: TextStyle(fontSize: 15,color: Colors.grey)
                     ),
                   )
                 )
