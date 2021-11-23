@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 
 void main() => runApp(const ProductPage());
@@ -29,6 +31,20 @@ class MyStatefulWidget extends StatefulWidget {
 
 /// This is the private State class that goes with MyStatefulWidget.
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+List productData = [];
+  _initData(){
+    DefaultAssetBundle.of(context).loadString("model/product.json").then((value) => {
+      productData = json.decode(value),
+    });
+  }
+
+
+ @override
+  void initState(){
+    super.initState();
+    _initData();
+  }
+
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
