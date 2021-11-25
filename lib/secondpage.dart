@@ -135,11 +135,15 @@ List productData = [];
                         child: Icon(
                           Icons.search,
                           color: Colors.grey,
-                          size:20
+                          size:25
                         ),
                       ),
                       hintText: "Search",
-                      hintStyle: TextStyle(fontSize: 15,color: Colors.grey)
+                      hintStyle: TextStyle(
+                        fontSize: 20,
+                        color: Colors.grey
+                      
+                      )
                     ),
                   )
                 )
@@ -156,6 +160,7 @@ List productData = [];
             //       ),
             //   ],
             // ),
+            const SizedBox(height: 30,),
             Expanded(child: OverflowBox(
               maxWidth: MediaQuery.of(context).size.width,
               child: ListView.builder(
@@ -166,9 +171,9 @@ List productData = [];
                   return Row(
                     children: <Widget>[
                      Container(
-                       height: 170,
+                       height: 200,
                        width: (MediaQuery.of(context).size.width-90)/2,
-                       margin: const EdgeInsets.only(left: 30,bottom: 30),
+                       margin: const EdgeInsets.only(left: 10,bottom: 30),
                        padding: const EdgeInsets.only(bottom: 10),
                        decoration: BoxDecoration(
                          color: Colors.white,
@@ -205,7 +210,7 @@ List productData = [];
                      ),
                      //second Flag
                      Container(
-                       height: 170,
+                       height: 200,
                        width: (MediaQuery.of(context).size.width-90)/2,
                         margin: const EdgeInsets.only(left: 20,bottom: 30),
                        padding: const EdgeInsets.only(bottom: 10),
