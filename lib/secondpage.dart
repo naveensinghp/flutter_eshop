@@ -181,13 +181,13 @@ List productData = [];
                          boxShadow: [
                            BoxShadow (
                              blurRadius: 3,
-                             offset: const Offset(5,5),
-                             color: Colors.red.withOpacity(0.1)
+                             offset: const Offset(3,3),
+                             color: Colors.black.withOpacity(0.1)
                             ),
                             BoxShadow (
                              blurRadius: 3,
-                             offset: const Offset(-5,-5),
-                             color: Colors.red.withOpacity(0.1)
+                             offset: const Offset(-3,-3),
+                             color: Colors.black.withOpacity(0.1)
                             )
                          ]
                        ),
