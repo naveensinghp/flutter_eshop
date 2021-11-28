@@ -7,13 +7,10 @@ void main() => runApp(const ProductPage());
 class ProductPage extends StatelessWidget {
   const ProductPage({Key? key}) : super(key: key);
 
-  static const String _title = 'Flutter Code Sample';
-
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: _title,
       color: Colors.green,
       home: MyStatefulWidget(),
     );
