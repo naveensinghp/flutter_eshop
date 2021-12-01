@@ -5,59 +5,42 @@ class TestWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: <Widget>[
-        Align(
-          alignment: Alignment.topCenter,
-          child: Padding(
-            padding: EdgeInsets.only(top: 50,right: 20),
-             child: Container(
-            width: 200,
-            height: 200,
-            decoration: BoxDecoration(
-              color: Colors.white,
-               border: Border.all(),
-               borderRadius: BorderRadius.circular(18),
-            ),
-            child: Container(
-              padding: const EdgeInsets.only(left: 12),
-              child: Column(
-                children: const <Widget>[
-                  Text(
-                    'Powder',
-                    style: TextStyle(
-                      fontSize: 10,
-                      fontWeight: FontWeight.bold
-                  ),
-                  ),
-                  
-                ],
-              ),
-            ),
-          ),
-          ),
-        ),
-        Align(
-          alignment: Alignment.bottomCenter,
-          child: Container(
-           width: 100,
-           height: 100,
-           decoration: BoxDecoration(
-              color: Colors.white,
-              border: Border.all(),
-              image:  const DecorationImage(
-                image: AssetImage("assets/image/palette.jpeg")
-              )
-           ),
-           
-        ),
-        ),
-      ],
+    return Container(
+      width: 250,
+      height: 200,
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        //border: Border.all(),
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(18),
+        image: const DecorationImage(
+          image: AssetImage("assets/image/ok.png"),
+          alignment: Alignment(-0, -0.7)
+        )
+      ),
+      child: testData,
     );
   }
 }
 
-
+Widget testData = 
+Container(
+  padding: const EdgeInsets.only(top: 20),
+  child: Row(
+    children: const <Widget>[
+      Text('Powders',style: 
+      TextStyle(fontSize: 30)
+    )
+    ],
+  ),
+);
+// Row(
+//   children: const <Widget>[
+//       Text('Powder',style: 
+//       TextStyle(fontSize: 30)
+//     )
+//   ],
+// );
 
 // return Stack(
 //       children: [
