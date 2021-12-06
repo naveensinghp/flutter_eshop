@@ -5,8 +5,18 @@ class AddProduct extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return ElevatedButton(
+      onPressed: () {},
+      child: const Icon(
+        Icons.add,
+        color: Colors.black87,
+        size: 20.0,
+      ),
+      style: ElevatedButton.styleFrom(
+        primary: const Color(0xff00e2e3),
+        shape: const CircleBorder(),
+        //padding: const EdgeInsets.all(10),
+      ),
+    );
   }
-
 }
-

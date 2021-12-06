@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_eshop/addbutton.dart';
 
 class TestWidget extends StatelessWidget {
   const TestWidget({Key? key}) : super(key: key);
@@ -25,31 +26,52 @@ class TestWidget extends StatelessWidget {
       children: <Widget>[
         Container(
           height: 200,
+          width: 200,
           color: Colors.white,
           child: Padding(
             padding: const EdgeInsets.fromLTRB(10, 70, 10, 10),
             child: Column(
-              children: const <Widget>[
-                  Text('Warning !!!', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),),
-                  SizedBox(height: 5,),
-                  Text('You can not access this file', style: TextStyle(fontSize: 20),),
-                  SizedBox(height: 20,),
-                  
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                  const Text('Powder', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),),
+                  const SizedBox(height: 5,),
+                  const Text('With Olive Oil', style: TextStyle(fontSize: 20),),
+                  const SizedBox(height: 10,),
+                  Row(
+                    children: <Widget>[
+                      const Text(
+                        '10.50',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w800
+                        ),
+                    ),
+                      Expanded(child: Container()),
+                      const AddProduct()
+                    ],
+                  )
                 ],
             ),
           ),
         ),
         const Positioned(
-            top: -60,
-            child: CircleAvatar(
-              backgroundColor: Colors.redAccent,
-              radius: 60,
-              child: 
-              Icon(
-                Icons.assistant_photo, 
-                color: Colors.white, size: 50,
-              ),
-            )
+            top: -70,
+            child: Image(
+              width: 130,
+              image: AssetImage("assets/image/rose.png"),
+            ),
+            // child: CircleAvatar(
+            //   backgroundColor: Colors.white,
+            //   radius: 60,
+            //   child: 
+            //   Image(
+            //     image: AssetImage("assets/image/ok.png"),
+            //   )
+            //   // Icon(
+            //   //   Icons.assistant_photo, 
+            //   //   color: Colors.white, size: 50,
+            //   // ),
+            // )
           ),
       ],
       
