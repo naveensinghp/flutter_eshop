@@ -25,16 +25,19 @@ class TestWidget extends StatelessWidget {
       alignment: Alignment.topCenter,
       children: <Widget>[
         Container(
-          height: 200,
+          height: 210,
           width: 200,
-          color: Colors.white,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(20)
+          ),
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(10, 70, 10, 10),
+            padding: const EdgeInsets.only(top: 90,left: 10),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                   const Text('Powder', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),),
-                  const SizedBox(height: 5,),
+                  const SizedBox(height: 1.5,),
                   const Text('With Olive Oil', style: TextStyle(fontSize: 20),),
                   const SizedBox(height: 10,),
                   Row(
