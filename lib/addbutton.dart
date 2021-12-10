@@ -9,7 +9,7 @@ class AddProduct extends StatelessWidget {
       onPressed: () {},
       child: const Icon(
         Icons.add,
-        color: Colors.black87,
+        color: Colors.black,
         size: 20.0,
       ),
       style: ElevatedButton.styleFrom(
