@@ -2,87 +2,109 @@ import 'package:flutter/material.dart';
 import 'package:flutter_eshop/addbutton.dart';
 
 class TestWidget extends StatelessWidget {
-  const TestWidget({Key? key}) : super(key: key);
-
+  
   @override
   Widget build(BuildContext context) {
-
-    return Column(
-    children: <Widget>[
-      Row(
-        children: <Widget>[
-          Expanded(
-            child: 
-            Container(
-              width: 200,
-              padding: const EdgeInsets.all(12),
-              decoration: BoxDecoration(
-                border: Border.all(),
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(18),
-              ),
-            )
-          ),
-         Expanded(
-            child: 
-            Container(
-              width: 200,
-              height: 200,
-              padding: const EdgeInsets.all(12),
-              decoration: BoxDecoration(
-                border: Border.all(),
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(18),
-              ),
-            )
-          )
-        ],
-      ),
-      Row(
-        children: <Widget>[
-          Expanded(
-            child: 
-            Container(
-              width: 200,
-              padding: const EdgeInsets.all(12),
-              decoration: BoxDecoration(
-                border: Border.all(),
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(18),
-              ),
-            )
-          ),
-          Expanded(
-            child: 
-            Container(
-              width: 200,
-              padding: const EdgeInsets.all(12),
-              decoration: BoxDecoration(
-                border: Border.all(),
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(18),
-              ),
-            )
-          )
-        ],
-      ),
-      Row(
-        children: <Widget>[
-          Expanded(
-            child: 
-            Container(
-              padding: const EdgeInsets.all(12),
-              decoration: BoxDecoration(
-                border: Border.all(),
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(18),
-              ),
-            )
-          )
-        ],
-      ),
-    ],
-  );
+    return GridView.count(
+      primary: false,
+      padding: const EdgeInsets.all(20),
+      crossAxisSpacing: 10,
+      mainAxisSpacing: 10,
+      crossAxisCount: 2,
+      children: <Widget>[
+        Container(
+          color: Colors.pink,
+          padding: const EdgeInsets.all(9),
+          child: const Text('Page'),
+        ),
+        Container(
+          color: Colors.green,
+          padding: const EdgeInsets.all(9),
+          child: const Text('Shall We Begin'),
+        ),
+        Container(
+          color: Colors.yellow,
+          padding: const EdgeInsets.all(9),
+          child: const Text('Shall We Begin'),
+        )
+      ],
+    );
+  //   return Column(
+  //   children: <Widget>[
+  //     Row(
+  //       children: <Widget>[
+  //         Expanded(
+  //           child: 
+  //           Container(
+  //             width: 200,
+  //             padding: const EdgeInsets.all(12),
+  //             decoration: BoxDecoration(
+  //               border: Border.all(),
+  //               color: Colors.white,
+  //               borderRadius: BorderRadius.circular(18),
+  //             ),
+  //           )
+  //         ),
+  //        Expanded(
+  //           child: 
+  //           Container(
+  //             width: 200,
+  //             height: 200,
+  //             padding: const EdgeInsets.all(12),
+  //             decoration: BoxDecoration(
+  //               border: Border.all(),
+  //               color: Colors.white,
+  //               borderRadius: BorderRadius.circular(18),
+  //             ),
+  //           )
+  //         )
+  //       ],
+  //     ),
+  //     Row(
+  //       children: <Widget>[
+  //         Expanded(
+  //           child: 
+  //           Container(
+  //             width: 200,
+  //             padding: const EdgeInsets.all(12),
+  //             decoration: BoxDecoration(
+  //               border: Border.all(),
+  //               color: Colors.white,
+  //               borderRadius: BorderRadius.circular(18),
+  //             ),
+  //           )
+  //         ),
+  //         Expanded(
+  //           child: 
+  //           Container(
+  //             width: 200,
+  //             padding: const EdgeInsets.all(12),
+  //             decoration: BoxDecoration(
+  //               border: Border.all(),
+  //               color: Colors.white,
+  //               borderRadius: BorderRadius.circular(18),
+  //             ),
+  //           )
+  //         )
+  //       ],
+  //     ),
+  //     Row(
+  //       children: <Widget>[
+  //         Expanded(
+  //           child: 
+  //           Container(
+  //             padding: const EdgeInsets.all(12),
+  //             decoration: BoxDecoration(
+  //               border: Border.all(),
+  //               color: Colors.white,
+  //               borderRadius: BorderRadius.circular(18),
+  //             ),
+  //           )
+  //         )
+  //       ],
+  //     ),
+  //   ],
+  // );
   
     // return Stack(
     //   overflow: Overflow.visible,

@@ -102,7 +102,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               children: <Widget>[
                 Container(
                   height: 50,
-                  width: 370,
+                  width: 350,
                   padding: const EdgeInsets.only(left: 20),
                   decoration: const BoxDecoration(
                     color: Colors.white,

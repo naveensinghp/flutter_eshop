@@ -33,62 +33,75 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-               const Text(
-                'Make new era of',
-                  style: TextStyle(
-                  fontSize: 20, 
-                  color: Colors.pink
+              //leftSection(),
+              const Text('Make new era of',
+                style: TextStyle(
+                fontSize: 20, 
+                color: Colors.pink
                 ),
               ),
-              const SizedBox(height: 2),
-              Container(
-                padding: const EdgeInsets.only(top: 2),
-                child: Row(
-                  children: <Widget>[
-                    const Text(
+              const SizedBox(height: 10),
+              Row(
+                children: <Widget>[
+                      const Text(
                       'Natural',
                       style: TextStyle(
                           fontSize: 60,
                           color: Colors.black87,
                           fontWeight: FontWeight.w800),
                     ),
-                    Expanded(child: Container()),
-                    Container(
-                      padding: const EdgeInsets.only(right: 25,),
-                      //margin: const EdgeInsets.only(top: 10),
-                      child: ElevatedButton(
-                        onPressed: () {
-                          _navigateToNextScreen(context);
-                        },
-                        child: const Icon(
-                          Icons.arrow_forward,
-                          color: Colors.black87,
-                          size: 30.0,
-                        ),
-                        style: ElevatedButton.styleFrom(
-                          primary: const Color(0xff00e2e3),
-                          shape: const CircleBorder(),
-                          padding: const EdgeInsets.all(24),
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              const Text(
-                'Beauty',
-                style: TextStyle(
-                    fontSize: 60,
-                    color: Colors.black87,
-                    fontWeight: FontWeight.w800),
-              ),
-              const Text(
-                'Cosmetics',
-                style: TextStyle(
-                    fontSize: 60,
-                    color: Colors.black87,
-                    fontWeight: FontWeight.w800),
+                    const SizedBox(width: 10,),
+                    roundedButton()
+                ],
               )
+              // Container(
+              //   padding: const EdgeInsets.only(top: 2),
+              //   child: Row(
+              //     children: <Widget>[
+              //       const Text(
+              //         'Natural',
+              //         style: TextStyle(
+              //             fontSize: 60,
+              //             color: Colors.black87,
+              //             fontWeight: FontWeight.w800),
+              //       ),
+              //       Expanded(child: Container()),
+              //       Container(
+              //         padding: const EdgeInsets.only(right: 25,),
+              //         //margin: const EdgeInsets.only(top: 10),
+              //         child: ElevatedButton(
+              //           onPressed: () {
+              //             _navigateToNextScreen(context);
+              //           },
+              //           child: const Icon(
+              //             Icons.arrow_forward,
+              //             color: Colors.black87,
+              //             size: 30.0,
+              //           ),
+              //           style: ElevatedButton.styleFrom(
+              //             primary: const Color(0xff00e2e3),
+              //             shape: const CircleBorder(),
+              //             padding: const EdgeInsets.all(24),
+              //           ),
+              //         ),
+              //       )
+              //     ],
+              //   ),
+              // ),
+              // const Text(
+              //   'Beauty',
+              //   style: TextStyle(
+              //       fontSize: 60,
+              //       color: Colors.black87,
+              //       fontWeight: FontWeight.w800),
+              // ),
+              // const Text(
+              //   'Cosmetics',
+              //   style: TextStyle(
+              //       fontSize: 60,
+              //       color: Colors.black87,
+              //       fontWeight: FontWeight.w800),
+              // )
             ],
           ),
         ),
@@ -99,4 +112,26 @@ class _MyHomePageState extends State<MyHomePage> {
   void _navigateToNextScreen(BuildContext context) {
     Navigator.of(context).push(MaterialPageRoute(builder: (context) => const ProductPage()));
   }
+
+  Widget roundedButton(){
+    return Container(
+      padding: EdgeInsets.only(bottom: 10),
+      child: ElevatedButton(
+        onPressed: (){
+          _navigateToNextScreen(context);
+        },
+        child: const Icon(
+          Icons.arrow_forward,
+          color: Colors.black87,
+          size: 30.0,
+        ),
+        style: ElevatedButton.styleFrom(
+          primary: const Color(0xff00e2e3),
+          shape: const CircleBorder(),
+          padding: const EdgeInsets.all(24),
+        ),
+      ),
+    );
+  }
+
 }
