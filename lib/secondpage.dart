@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_eshop/homepage.dart';
 import 'package:flutter_eshop/product.dart';
 
 void main() => runApp(const ProductPage());
@@ -49,6 +50,14 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
+      print(index);
+      if(index == 0){
+        Navigator.push(context,
+            MaterialPageRoute(
+              builder: (context) => const MyHomePage(),
+            ),
+        );
+      }
     });
   }
 
@@ -144,7 +153,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             //   ],
             // ),
             const SizedBox(height: 90,),
-            const ProductData()
+            //const ProductData()
           ],
         ),
         //_middleSection
