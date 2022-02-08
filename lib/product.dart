@@ -29,7 +29,10 @@ class _MyProductWidgetState extends State<ProductData> {
 
   @override
   Widget build(BuildContext context) {
-    return TestWidget();
+      return SingleChildScrollView(
+        child: TestWidget(),
+      );
+    //return TestWidget();
     // return Expanded(
     //     child: OverflowBox(
     //   maxWidth: MediaQuery.of(context).size.width,

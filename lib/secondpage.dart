@@ -33,24 +33,14 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Home',
-      style: optionStyle,
-    ),
-    Text(
-      'Most Liked Page',
-      style: optionStyle,
-    ),
-    Text(
-      'Cart Page',
-      style: optionStyle,
-    ),
+    Text('Home', style: optionStyle,),
+    Text('Most Liked Page', style: optionStyle,),
+    Text('Cart Page', style: optionStyle,),
   ];
 
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
-      print(index);
       if(index == 0){
         Navigator.push(context,
             MaterialPageRoute(
@@ -66,7 +56,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     return Scaffold(
       backgroundColor: const Color(0xfff6f6f6),
       body: Container(
-        padding: const EdgeInsets.only(left: 30, top: 80),
+        padding: const EdgeInsets.only(left: 20, top: 80),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
@@ -87,6 +77,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 )
               ],
             ),
+            const SizedBox(height: 10,),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: const <Widget>[
@@ -108,6 +99,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             ),
             const SizedBox(height: 20,),
             Row(
+              mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 Container(
                   height: 50,
@@ -134,26 +126,23 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                       hintStyle: TextStyle(
                         fontSize: 20,
                         color: Colors.grey
-                      
                       )
                     ),
                   )
                 )
               ],
             ),
-            // Row(
-            //   children: <Widget>[
-            //    Container(
-            //         height: 80,
-            //         width: 200,
-            //         decoration: const BoxDecoration(
-            //           color: Colors.red
-            //         ),
-            //       ),
-            //   ],
-            // ),
             const SizedBox(height: 90,),
-            //const ProductData()
+            Wrap(
+              children: List.generate(
+                  2, (index) => Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  ProductData(),
+                ],
+              )
+              ),
+            ),
           ],
         ),
         //_middleSection
