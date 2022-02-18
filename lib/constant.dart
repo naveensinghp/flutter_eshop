@@ -1,20 +1,7 @@
 import 'package:flutter/material.dart';
 
 
-class HomeText extends StatelessWidget {
-  const HomeText({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return const Text(
-      'Natural',
-      style: TextStyle(
-          fontSize: 50,
-          color: Colors.black87,
-          fontWeight: FontWeight.w800
-    )
-    );
-  }
-
-}
+const lightBlackColor = Color(0xFF2c3130);
+const darkBlackColor = Color(0xFF000100);
+const textColor = Colors.white;
+const currencyColor = Colors.greenAccent;

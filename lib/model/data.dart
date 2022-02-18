@@ -19,3 +19,16 @@ final Data appData = Data(
 
 );
 
+
+class ProductData {
+  final String productname,productSubtitle;
+  ProductData({
+    required this.productname,
+    required this.productSubtitle
+  });
+
+  final ProductData powder = ProductData(
+      productname: 'Test Data 1',
+      productSubtitle: 'Subtitle');
+
+}

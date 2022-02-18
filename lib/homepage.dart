@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_eshop/constant.dart';
 import 'package:flutter_eshop/listview.dart';
+import 'package:flutter_eshop/loginpage.dart';
 import 'package:flutter_eshop/secondpage.dart';
 //import 'package:flutter_eshop/homepagecard.dart';
 
@@ -42,7 +43,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   Text(
                     'Meet new era of',
                     style: TextStyle(
-                        fontSize: 15,
+                        fontSize: 20,
+                        fontFamily: 'gilroy',
                         color: Colors.pink,
                     ),
                   ),
@@ -58,6 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         'Natural',
                         style: TextStyle(
                             fontSize: 50,
+                            fontFamily: 'gilroy',
                             color: Colors.black87,
                             fontWeight: FontWeight.w800)
                         ,
@@ -66,6 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         'Beauty',
                         style: TextStyle(
                             fontSize: 50,
+                            fontFamily: 'gilroy',
                             color: Colors.black87,
                             fontWeight: FontWeight.w800)
                         ,
@@ -83,6 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     'Cosemtics',
                     style: TextStyle(
                         fontSize: 50,
+                        fontFamily: 'gilroy',
                         color: Colors.black87,
                         fontWeight: FontWeight.w800)
                     ,
@@ -97,7 +102,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _navigateToNextScreen(BuildContext context) {
-    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const ProductPage()));
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  const LoginPage()));
   }
 
   Widget roundedButton(){
