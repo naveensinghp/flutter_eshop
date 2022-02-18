@@ -14,5 +14,12 @@ Better Developer
 6. Make Sure Relipcated as per design requirement
 
 
+Pages
+
+1. Splash Screen
+2. Login Page
+3. Create Accoun
+
+
 
 

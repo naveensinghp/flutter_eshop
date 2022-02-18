@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_eshop/signup.dart';
-
 import 'constant.dart';
 
 
-class LoginPage extends StatelessWidget{
-  const LoginPage({Key? key}) : super(key: key);
+class SignupPage extends StatelessWidget{
+  const SignupPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +15,13 @@ class LoginPage extends StatelessWidget{
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Container(
+              child:  const Icon(
+                Icons.arrow_back,
+                color: Colors.black87,
+                size: 30.0,
+              ),
+            ),
             const Text(
               'Welcome to Eshop!',
               style: TextStyle(
@@ -24,29 +29,8 @@ class LoginPage extends StatelessWidget{
                   fontSize: 25
               ),
             ),
-            const Text(
-              'Login to Continue',
-              style: TextStyle(
-                  color: Colors.grey,
-                  fontFamily: gilory,
-                  fontSize: 26
-              ),
-            ),
-            SizedBox(height: 20,),
-            Center(
-              child: Container(
-                  width: 250,
-                  height: 250,
-                  decoration:  const BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage('assets/image/cool.jpg'),
-                        fit: BoxFit.cover,
-                        //alignment: Alignment.bottomLeft,
-                      )
-                  )
-              ),
-            ),
 
+            SizedBox(height: 60,),
             Container(
               padding: const EdgeInsets.only(right: 16),
               child: Column(
@@ -54,10 +38,10 @@ class LoginPage extends StatelessWidget{
                 children: [
                   TextFormField(
                     decoration: const InputDecoration(
-                        hintText: 'Email',
-                        labelText: 'Email',
+                        hintText: 'Name',
+                        labelText: 'Name',
                         labelStyle: TextStyle(
-                          fontFamily: gilory
+                            fontFamily: gilory
                         )
                     ),
                   ),
@@ -67,9 +51,9 @@ class LoginPage extends StatelessWidget{
                     decoration: const InputDecoration(
                         hintText: 'Password',
                         labelText: 'Password',
-                      labelStyle: TextStyle(
-                        fontFamily: gilory
-                      )
+                        labelStyle: TextStyle(
+                            fontFamily: gilory
+                        )
                     ),
                   ),
                   const SizedBox(height: 15,),
@@ -84,9 +68,9 @@ class LoginPage extends StatelessWidget{
                       style: ElevatedButton.styleFrom(
                           onPrimary: Colors.black87,
                           primary: const Color(0xff00e2e3),
-                        shape: const RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(10)),
-                        )
+                          shape: const RoundedRectangleBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                          )
                       ),
                     ),
                   ),
@@ -95,9 +79,7 @@ class LoginPage extends StatelessWidget{
                     width: double.infinity,
                     height: 50,
                     child: ElevatedButton(
-                      onPressed: () {
-                        _goSignupPage(context);
-                      },
+                      onPressed: () {},
                       child: const Text('Create Account'),
                       style: ElevatedButton.styleFrom(
                           onPrimary: Colors.black87,
@@ -118,7 +100,4 @@ class LoginPage extends StatelessWidget{
     );
   }
 
-  void _goSignupPage(BuildContext context){
-    Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  const SignupPage()));
-  }
 }

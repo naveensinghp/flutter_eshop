@@ -28,7 +28,6 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         //child: HomePageBottomCard(),
         child: Container(
-          //padding: const EdgeInsets.only(left: 30, top: 40, right: 10),
           padding: const EdgeInsets.symmetric(horizontal: 25,vertical: 60),
           height: 410,
           width: MediaQuery.of(context).size.width,
@@ -40,8 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
               //leftSection(),
               Row(
                 children: const [
-                  Text(
-                    'Meet new era of',
+                  Text('Meet new era of',
                     style: TextStyle(
                         fontSize: 20,
                         fontFamily: 'gilroy',
