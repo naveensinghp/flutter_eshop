@@ -15,22 +15,24 @@ class SignupPage extends StatelessWidget{
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              child:  const Icon(
-                Icons.arrow_back,
-                color: Colors.black87,
-                size: 30.0,
-              ),
+            Row(
+              children: const [
+                Icon(
+                  Icons.arrow_back_ios,
+                  color: Colors.black87,
+                  size: 20.0,
+                ),
+               SizedBox(width: 10,),
+                Text(
+                  'Signup to get Started!',
+                  style: TextStyle(
+                      fontFamily: gilory,
+                      fontSize: 20
+                  ),
+                ),
+              ],
             ),
-            const Text(
-              'Welcome to Eshop!',
-              style: TextStyle(
-                  fontFamily: gilory,
-                  fontSize: 25
-              ),
-            ),
-
-            SizedBox(height: 60,),
+            const SizedBox(height: 60,),
             Container(
               padding: const EdgeInsets.only(right: 16),
               child: Column(
@@ -47,7 +49,15 @@ class SignupPage extends StatelessWidget{
                   ),
                   SizedBox(height: 10,),
                   TextFormField(
-                    obscureText: true,
+                    decoration: const InputDecoration(
+                        hintText: 'Email',
+                        labelText: 'Email',
+                        labelStyle: TextStyle(
+                            fontFamily: gilory
+                        )
+                    ),
+                  ),
+                  TextFormField(
                     decoration: const InputDecoration(
                         hintText: 'Password',
                         labelText: 'Password',
@@ -56,24 +66,31 @@ class SignupPage extends StatelessWidget{
                         )
                     ),
                   ),
-                  const SizedBox(height: 15,),
-                  const Text('Forgot Password ?'),
-                  const SizedBox(height: 30,),
-                  SizedBox(
-                    width: double.infinity,
-                    height: 50,
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      child: const Text('Login'),
-                      style: ElevatedButton.styleFrom(
-                          onPrimary: Colors.black87,
-                          primary: const Color(0xff00e2e3),
-                          shape: const RoundedRectangleBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(10)),
-                          )
-                      ),
+                  TextFormField(
+                    decoration: const InputDecoration(
+                        hintText: 'Confirm Password',
+                        labelText: 'Confirm Password',
+                        labelStyle: TextStyle(
+                            fontFamily: gilory
+                        )
                     ),
                   ),
+                  const SizedBox(height: 30,),
+                  // SizedBox(
+                  //   width: double.infinity,
+                  //   height: 50,
+                  //   child: ElevatedButton(
+                  //     onPressed: () {},
+                  //     child: const Text('Login'),
+                  //     style: ElevatedButton.styleFrom(
+                  //         onPrimary: Colors.black87,
+                  //         primary: const Color(0xff00e2e3),
+                  //         shape: const RoundedRectangleBorder(
+                  //           borderRadius: BorderRadius.all(Radius.circular(10)),
+                  //         )
+                  //     ),
+                  //   ),
+                  // ),
                   const SizedBox(height: 30,),
                   SizedBox(
                     width: double.infinity,
@@ -89,8 +106,9 @@ class SignupPage extends StatelessWidget{
                           )
                       ),
                     ),
-                  )
-
+                  ),
+                  const SizedBox(height: 30,),
+                  const Text('Already have an account ? Sign In'),
                 ],
               ),
             )

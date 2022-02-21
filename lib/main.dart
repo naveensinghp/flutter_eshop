@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_eshop/homepage.dart';
+import 'package:flutter_eshop/splashscreen.dart';
 
 // Project Started 20 Oct 2021
 void main() {
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         backgroundColor: Colors.blueAccent
       ),
-      home: const MyHomePage(),
+      // home: const MyHomePage(),
+      home: SplashScreen(),
     );
   }
 }
