@@ -2,11 +2,13 @@
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatelessWidget {
+  const SplashScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      backgroundColor: Color(0xFF98d6ed),
+      backgroundColor: const Color(0xFF98d6ed),
       // body: Container(
       //   height: 400,
       //   decoration: const BoxDecoration(
@@ -35,6 +37,7 @@ class SplashScreen extends StatelessWidget {
             ),
           ),
          Container(
+           padding: const EdgeInsets.symmetric(horizontal: 25,vertical: 50),
            height: 400,
            alignment: Alignment.bottomCenter,
            decoration: const BoxDecoration(
@@ -43,7 +46,24 @@ class SplashScreen extends StatelessWidget {
                  topRight: Radius.circular(20),
                  topLeft: Radius.circular(20)
                ),
-           )
+           ),
+           child: Column(
+             children: [
+               Row(
+                 crossAxisAlignment: CrossAxisAlignment.start,
+                 children: const [
+                   Text('eet new era of',
+                     style: TextStyle(
+                       fontSize: 20,
+                       fontFamily: 'gilroy',
+                       color: Colors.pink,
+                     ),
+                   ),
+                   SizedBox(height: 10,),
+                 ],
+               ),
+             ],
+           ),
          )
         ],
       ),

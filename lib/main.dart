@@ -20,8 +20,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         backgroundColor: Colors.blueAccent
       ),
-      // home: const MyHomePage(),
-      home: SplashScreen(),
+       home: const MyHomePage(),
+      //home: SplashScreen(),
     );
   }
 }

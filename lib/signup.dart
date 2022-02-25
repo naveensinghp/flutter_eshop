@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_eshop/loginpage.dart';
 import 'constant.dart';
 
 
@@ -16,14 +17,16 @@ class SignupPage extends StatelessWidget{
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
-              children: const [
-                Icon(
-                  Icons.arrow_back_ios,
-                  color: Colors.black87,
-                  size: 20.0,
+              children: [
+                IconButton(
+                  icon: const Icon(Icons.arrow_back_ios),
+                  highlightColor: Colors.pink,
+                  onPressed: (){
+                    _navigateToLoginScreen(context);
+                  },
                 ),
-               SizedBox(width: 10,),
-                Text(
+               const SizedBox(width: 10,),
+                const Text(
                   'Signup to get Started!',
                   style: TextStyle(
                       fontFamily: gilory,
@@ -47,7 +50,7 @@ class SignupPage extends StatelessWidget{
                         )
                     ),
                   ),
-                  SizedBox(height: 10,),
+                  const SizedBox(height: 10,),
                   TextFormField(
                     decoration: const InputDecoration(
                         hintText: 'Email',
@@ -116,6 +119,10 @@ class SignupPage extends StatelessWidget{
         ),
       ),
     );
+  }
+
+  void _navigateToLoginScreen(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  const LoginPage()));
   }
 
 }
