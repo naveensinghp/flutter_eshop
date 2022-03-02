@@ -1,12 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_eshop/signup.dart';
 
 import 'constant.dart';
 
 
-class LoginPage extends StatelessWidget{
+
+class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
+  @override
+  State<LoginPage> createState() => _MyStatefulWidgetState();
+}
+
+class _MyStatefulWidgetState extends State<LoginPage> {
+  final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -56,9 +64,16 @@ class LoginPage extends StatelessWidget{
                           hintText: 'Email',
                           labelText: 'Email',
                           labelStyle: TextStyle(
-                            fontFamily: gilory
-                          )
+                              fontFamily: gilory
+                          ),
                       ),
+                      validator: (String? value){
+                        if(value == null || value.isEmpty ){
+                          print('Hello');
+                          return 'Please enter some text';
+                        }
+                        return null;
+                      },
                     ),
                     SizedBox(height: 10,),
                     TextFormField(
@@ -66,9 +81,9 @@ class LoginPage extends StatelessWidget{
                       decoration: const InputDecoration(
                           hintText: 'Password',
                           labelText: 'Password',
-                        labelStyle: TextStyle(
-                          fontFamily: gilory
-                        )
+                          labelStyle: TextStyle(
+                              fontFamily: gilory
+                          )
                       ),
                     ),
                     const SizedBox(height: 15,),
@@ -78,14 +93,18 @@ class LoginPage extends StatelessWidget{
                       width: double.infinity,
                       height: 50,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          if (_formkey.currentState!.validate()) {
+                            // Process data.
+                          }
+                        },
                         child: const Text('Login'),
                         style: ElevatedButton.styleFrom(
                             onPrimary: Colors.black87,
                             primary: const Color(0xff00e2e3),
-                          shape: const RoundedRectangleBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(10)),
-                          )
+                            shape: const RoundedRectangleBorder(
+                              borderRadius: BorderRadius.all(Radius.circular(10)),
+                            )
                         ),
                       ),
                     ),
@@ -117,7 +136,6 @@ class LoginPage extends StatelessWidget{
       ),
     );
   }
-
   void _goSignupPage(BuildContext context){
     Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  const SignupPage()));
   }
